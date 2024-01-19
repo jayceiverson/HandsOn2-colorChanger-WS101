@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            
+            width: 300px;
+            border: 100px solid;
+            padding: 0px;
+            margin: 20px;
+            margin-left: 270px;
+            width: 20%;   
+            box-sizing: border-box;
+            border-radius:  20px;
+        }
+      
+        
+
+        body{
+            background-color:palegoldenrod;
+            text-align: center;
+            font-family: fantasy;
+            color: rgb(75, 72, 29);
+            
+        }
+
+        .container{
+            width: 80%; 
+            margin: 0 auto; 
+            background-color:orange; 
+            padding: 20px;
+            box-sizing: border-box;      
+            border-radius:  20px;  
+        }
+        button {
+            text-decoration: none;
+            position: relative;
+            border: none;
+            font-size: 14px;
+            font-family: inherit;
+            cursor: pointer;
+            color: #fff;
+            width: 9em;
+            height: 3em;
+            line-height: 2em;
+            text-align: center;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 300%;
+            border-radius: 30px;
+            z-index: 1;
+        }
+
+        button:hover {
+            animation: ani 8s linear infinite;
+            border: none;
+        }
+
+        
+
+        button:before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+            border-radius: 35px;
+            transition: 1s;
+        }
+
+        button:hover::before {
+  filter: blur(20px);
+        }
+
+        button:active {
+             background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+        }
+
+
+            
+
+    
+            
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>JavaScript colorChanger() Hands-On</h1>
+
+    <button id="click me">click me</button>
+    <div id="container" ></div>
+    </div>
+
+    <script>
+        function colorChange(){
+            var container = document.getElementById ("container");
+
+            if (container.style.color === "green"){
+                container.style.color = "blue";
+            }
+            else{ 
+                container.style.color = "green";
+            }
+
+        }
+        document.getElementById("click me").addEventListener("click",colorChange);
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
